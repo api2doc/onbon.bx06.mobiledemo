@@ -6,6 +6,7 @@ package onbon.bx06.mobiledemo;
 
 import android.app.Application;
 
+import j2a.awt.AwtEnv;
 import onbon.bx06.Bx6GEnv;
 
 public class MainApplication extends Application {
@@ -17,7 +18,13 @@ public class MainApplication extends Application {
         super.onCreate();
 
         try {
-            Bx6GEnv.initial();  // 建立 BX6G API 運行環境。
+            // java.awt for android 初始化
+            AwtEnv.initial(this);
+            AwtEnv.configPaintAntiAliasFlag(true);
+
+            // 建立 BX6G API 運行環境。
+            Bx6GEnv.initial();
+
             this.initial = true;
         }
         catch (Exception ex) {

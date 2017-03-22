@@ -164,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void writeProgram() {
         EditText msgText = (EditText)findViewById(R.id.msgText);
+        EditText fontNameText = (EditText)findViewById(R.id.fontNameText);
+        EditText fontSizeText = (EditText)findViewById(R.id.fontSizeText);
         try {
             Bx6GScreenProfile profile = screen.getProfile();
             DisplayStyleFactory.DisplayStyle[] styles = DisplayStyleFactory.getStyles().toArray(new DisplayStyleFactory.DisplayStyle[0]);
@@ -185,11 +187,14 @@ public class MainActivity extends AppCompatActivity {
             // 设置文本垂直居中方式
             page.setVerticalAlignment(TextBinary.Alignment.CENTER);
             // 设置文本字体
-            page.setFont(new Font("Arial", Font.PLAIN, 12));         // 字体
+            page.setFont(new Font(
+                    "" + fontNameText.getText(),
+                    Font.PLAIN,
+                    Integer.parseInt("" + fontSizeText.getText())));
             // 设置文本颜色
             page.setForeground(Color.red);
             // 设置区域背景色，默认为黑色
-            page.setBackground(Color.gray);
+            page.setBackground(Color.darkGray);
             // 调整特技方式
             page.setDisplayStyle(styles[4]);
             // 调整特技速度
