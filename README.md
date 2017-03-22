@@ -1,9 +1,9 @@
 onbon bx06 api for Android
 =====================
 
-本文件說明如何在 Android Studio 開發環境下，建立 [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) 的開發項目。
+本文件說明如何在 [Android Studio](https://developer.android.com/studio/index.html) 開發環境下，建立 [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) 的開發項目。
 
-github source 提供 Android Studio 項目樣板，可下載進行簡易測試。
+github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，資料顯示位置固定為 (96, 0, 32, 32)。
 
 <img src="images/screenshot1.png" alt="Sample" style="width: 250px;"/>
 
@@ -11,11 +11,17 @@ github source 提供 Android Studio 項目樣板，可下載進行簡易測試�
 
 #### JAR - onbon bx06 api 核心
 * bx06.message-0.5.0-SNAPSHOT.jar
+
 * bx06-0.5.0-SNAPSHOT.jar
+
 * log4j-1.2.14.jar
+
 * simple-xml-2.7.1.jar
+
 * uia.comm-0.2.1.jar
+
 * uia.message-0.5.1.jar
+
 * uia.utils-0.1.2.jar
 
 #### AAR - java.awt for android 核心
@@ -26,7 +32,7 @@ github source 提供 Android Studio 項目樣板，可下載進行簡易測試�
 
 #### build.gradle
 
-* flatDir - 設定相依 lib 的儲存位置。
+* flatDir - 設定相依 libs 的儲存位置。
 
 ```
 allprojects {
@@ -45,7 +51,7 @@ allprojects {
 
 * project.ext.set - 設定輸出檔案名稱。
 
-* dexOptions - 重新掛載 Java AWT wrapper。
+* dexOptions - 允許掛載 Java AWT 4 android。
 
 * dependencies - 加入 API 相關的 jar & aar 共八個檔案。檔案儲存在 libs 資料夾下。
 
