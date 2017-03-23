@@ -5,7 +5,7 @@ onbon bx06 api for Android
 
 github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，資料顯示位置固定為 (96, 0, 32, 32)。
 
-<img src="images/screenshot1.png" alt="Sample" width="270" />
+<img src="images/screenshot1.png" alt="Sample" width="400" />
 
 ## 相依檔案
 
@@ -120,8 +120,8 @@ public class MainApplication extends Application {
 
         try {
             // java.awt for android 初始化
-            AwtEnv.initial(this);
-            AwtEnv.configPaintAntiAliasFlag(true);
+            AwtEnv.link(this);                          // 將 Application 與 AWT 連結
+            AwtEnv.configPaintAntiAliasFlag(true);      // 設定圖案是要抗鋸齒。
 
             // 建立 BX6G API 運行環境。
             Bx6GEnv.initial();

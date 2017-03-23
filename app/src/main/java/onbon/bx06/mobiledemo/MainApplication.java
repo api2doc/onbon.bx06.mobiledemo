@@ -19,8 +19,8 @@ public class MainApplication extends Application {
 
         try {
             // java.awt for android 初始化
-            AwtEnv.initial(this);
-            AwtEnv.configPaintAntiAliasFlag(true);
+            AwtEnv.link(this);                          // 將 Application 與 AWT 連結
+            AwtEnv.configPaintAntiAliasFlag(true);      // 設定圖案是要抗鋸齒。
 
             // 建立 BX6G API 運行環境。
             Bx6GEnv.initial();
