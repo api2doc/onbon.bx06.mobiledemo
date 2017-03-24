@@ -90,7 +90,7 @@ dependencies {
 
 * android.permission.INTERNET - 設定允許 Socket 操作。
 
-```
+``` XML
 <application
     android:name="onbon.bx06.mobiledemo.MainApplication"
     ...>
@@ -103,7 +103,7 @@ dependencies {
 
 * 對應於 AndroidManifest.xml 中 android:name 的設定。
 
-```
+``` Java
 package onbon.bx06.mobiledemo;
 
 import android.app.Application;
@@ -138,7 +138,7 @@ public class MainApplication extends Application {
 
 #### Screen (控制器) 操作
 因為 Socket Client 不得執行於 UI 線程上，所以對 Screen 的操作都須在新的線程上，方能正確工作。
-```
+``` Java
 new Thread(new Runnable() {
     public void run() {
         // 操作 Screen
@@ -148,7 +148,7 @@ new Thread(new Runnable() {
 
 #### UI 更新
 在非 UI 線程上操作 Screen 後，欲將結果回報至 UI 時，利用 runOnUiThread 方法。
-```
+``` Java
 runOnUiThread(new Runnable() {
     public void run() {
         // 更新 UI
