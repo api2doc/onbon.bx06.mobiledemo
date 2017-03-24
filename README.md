@@ -133,3 +133,25 @@ public class MainApplication extends Application {
     }
 }
 ```
+
+## 開發注意事項
+
+#### Screen (控制器) 操作
+因為 Socket Client 不得執行於 UI 線程上，所以對 Screen 的操作都須在新的線程上，方能正確工作。
+```
+new Thread(new Runnable() {
+    public void run() {
+        // 操作 Screen
+    }
+}).start();
+```
+
+#### UI 更新
+在非 UI 線程上操作 Screen 後，欲將結果回報至 UI 時，利用 runOnUiThread 方法。
+```
+runOnUiThread(new Runnable() {
+    public void run() {
+        // 更新 UI
+    }
+});
+```
