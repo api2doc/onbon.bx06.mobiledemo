@@ -1,16 +1,16 @@
 onbon bx06 api for Android
 =====================
-[English](README_en.md)
+[Chinese](README.md)
 
-本文件說明如何在 [Android Studio](https://developer.android.com/studio/index.html) 開發環境下，建立 [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) 的開發項目。
+This document describes how to create a project of [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) in [Android Studio](https://developer.android.com/studio/index.html) IDE.
 
-github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，資料顯示位置固定在 (96, 0)，內容大小 為 (32, 32)。
+The controller that template from github source tests is BX-6Q2. Test information always be showed at fixed position (96,0) with fixed size (32,32).
 
 <img src="images/screenshot1.png" alt="Sample" width="400" />
 
-## 相依檔案
+## dependency files
 
-#### JAR - onbon bx06 api Java 庫
+#### JAR - onbon bx06 api Java Libraries
 * bx06.message-0.5.0-SNAPSHOT.jar
 
 * bx06-0.5.0-SNAPSHOT.jar
@@ -25,14 +25,14 @@ github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，�
 
 * uia.utils-0.1.2.jar
 
-#### AAR - onbon bx06 api on Android devcie 庫
+#### AAR - onbon bx06 api on Android devcie Libraries
 * java.awt4a-0.1-release.aar
 
-## Project 相關設定
+## project configuration
 
 #### build.gradle
 
-* flatDir - 設定相依 libs 的儲存位置。
+* flatDir - setup where library files saved.
 
 ``` gradle
 allprojects {
@@ -45,15 +45,15 @@ allprojects {
 }
 ```
 
-## App 相關設定
+## app configuration
 
 #### build.gradle
 
-* project.ext.set - 設定輸出檔案名稱。
+* project.ext.set - output name.
 
-* dexOptions - 允許掛載 Java AWT for Android。
+* dexOptions - allow to load Java AWT for Android。
 
-* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 _libs_ 資料夾下。
+* dependencies - define dependency files of onbon.bx06 API including JAR and AAR. All files saved in __libs__ folder.
 
 
 ``` gradle
@@ -87,9 +87,9 @@ dependencies {
 
 #### AndroidManifest.xml
 
-* android:name - 設定啟動應用程式類別，用來建立 BX6G API 運行環境。
+* android:name - setup startup class to initial runtime environment of BX6G API.
 
-* android.permission.INTERNET - 設定允許 Socket 操作。
+* android.permission.INTERNET - allow to use socket.
 
 ``` XML
 <application
@@ -102,7 +102,7 @@ dependencies {
 
 #### MainApplication.java
 
-AndroidManifest.xml 中 __android:name__ 設定類別的實作。
+Implementation of class which defines at __android:name__ in AndroidManifest.xml.
 
 ``` Java
 package onbon.bx06.mobiledemo;
@@ -119,11 +119,11 @@ public class MainApplication extends Application {
         super.onCreate();
 
         try {
-            // java.awt for android 初始化
-            AwtEnv.link(this);                          // 將 Application 與 AWT 連結
-            AwtEnv.configPaintAntiAliasFlag(true);      // 設定圖案是要抗鋸齒。
+            // java.awt for android initial
+            AwtEnv.link(this);                          // link application and AWT
+            AwtEnv.configPaintAntiAliasFlag(true);      // setup anti-alias flag.
 
-            // 建立 BX6G API 運行環境。
+            // BX6G API initial
             Bx6GEnv.initial();
 
             this.initial = true;
@@ -135,24 +135,24 @@ public class MainApplication extends Application {
 }
 ```
 
-## 開發注意事項
+## Develop
 
-#### Screen (控制器) 操作
-因為 Socket Client 不得執行於 UI 線程上，所以對 Screen 的操作都須在新的線程上，方能正確工作。
+#### Screen (Controller) operation
+Because socket client can't be runned on UI thread, all operations execute to screen need to run in new thread.
 ``` Java
 new Thread(new Runnable() {
     public void run() {
-        // 操作 Screen
+        // operate to screen
     }
 }).start();
 ```
 
-#### UI 更新
-在非 UI 線程上操作 Screen 後，欲將結果回報至 UI 時，利用 __runOnUiThread__ 方法。
+#### UI Update
+After executing to screen on non UI thread, use __runOnUiThread__ to callback to UI thread.
 ``` Java
 runOnUiThread(new Runnable() {
     public void run() {
-        // 更新 UI
+        // update UI
     }
 });
 ```
