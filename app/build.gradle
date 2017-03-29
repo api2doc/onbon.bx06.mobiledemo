@@ -28,7 +28,8 @@ android {
         preDexLibraries = false
         additionalParameters = ["--core-library"]
     }
-    productFlavors {
+    lintOptions {
+        abortOnError false
     }
 }
 
