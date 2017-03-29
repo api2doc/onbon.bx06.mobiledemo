@@ -1,5 +1,7 @@
 onbon bx06 api for Android
 =====================
+[![Build Status](https://travis-ci.org/api2doc/onbon.bx06.mobiledemo.svg?branch=master)](https://travis-ci.org/api2doc/onbon.bx06.mobiledemo)
+
 [Chinese](README.md)
 
 This document describes how to create a project of [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) in [Android Studio](https://developer.android.com/studio/index.html) IDE.
@@ -108,6 +110,8 @@ Implementation of class which defines at __android:name__ in AndroidManifest.xml
 package onbon.bx06.mobiledemo;
 
 import android.app.Application;
+
+import j2a.awt.AwtEnv;
 import onbon.bx06.Bx6GEnv;
 
 public class MainApplication extends Application {

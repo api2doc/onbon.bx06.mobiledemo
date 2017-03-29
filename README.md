@@ -1,5 +1,7 @@
 onbon bx06 api for Android
 =====================
+[![Build Status](https://travis-ci.org/api2doc/onbon.bx06.mobiledemo.svg?branch=master)](https://travis-ci.org/api2doc/onbon.bx06.mobiledemo)
+
 [English](README_en.md)
 
 本文件說明如何在 [Android Studio](https://developer.android.com/studio/index.html) 開發環境下，建立 [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) 的開發項目。
@@ -53,7 +55,7 @@ allprojects {
 
 * dexOptions - 允許掛載 Java AWT for Android。
 
-* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 _libs_ 資料夾下。
+* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 __libs__ 資料夾下。
 
 
 ``` gradle
@@ -108,6 +110,8 @@ AndroidManifest.xml 中 __android:name__ 設定類別的實作。
 package onbon.bx06.mobiledemo;
 
 import android.app.Application;
+
+import j2a.awt.AwtEnv;
 import onbon.bx06.Bx6GEnv;
 
 public class MainApplication extends Application {
