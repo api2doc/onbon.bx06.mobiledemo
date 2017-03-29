@@ -4,7 +4,6 @@ sudo: false
 
 jdk:
   - oraclejdk7
-  - openjdk6
 
 android:
   components:
@@ -12,6 +11,7 @@ android:
     - tools
     - build-tools-25.0.2
     - android-23
-    - android-24
-    - android-25
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
 
