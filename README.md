@@ -1,6 +1,7 @@
 onbon bx06 api for Android
 =====================
 [![Build Status](https://travis-ci.org/api2doc/onbon.bx06.mobiledemo.svg?branch=master)](https://travis-ci.org/api2doc/onbon.bx06.mobiledemo)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7648a518f70643bf823df3ea581d2689)](https://www.codacy.com/app/api2doc/onbon-bx06-mobiledemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=api2doc/onbon.bx06.mobiledemo&amp;utm_campaign=Badge_Grade)
 
 [English](README_en.md)
 
