@@ -13,7 +13,7 @@ github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，�
 
 ## 相依檔案
 
-#### JAR - onbon bx06 api Java 庫
+#### JAR - onbon bx06 api Java 庫 (與 Desktop 版本相同)
 * bx06.message-0.5.0-SNAPSHOT.jar
 
 * bx06-0.5.0-SNAPSHOT.jar
@@ -28,7 +28,7 @@ github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，�
 
 * uia.utils-0.1.2.jar
 
-#### AAR - onbon bx06 api on Android devcie 庫
+#### AAR - onbon bx06 api on Android devcie 庫 (Android 專用)
 * java.awt4a-0.1-release.aar
 
 ## Project 相關設定

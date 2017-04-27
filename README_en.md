@@ -13,7 +13,7 @@ The controller that template from github source tests is BX-6Q2. Test informatio
 
 ## dependency files
 
-#### JAR - onbon bx06 api Java Libraries
+#### JAR - onbon bx06 api Java Libraries (same as Desktop version)
 * bx06.message-0.5.0-SNAPSHOT.jar
 
 * bx06-0.5.0-SNAPSHOT.jar
@@ -28,7 +28,7 @@ The controller that template from github source tests is BX-6Q2. Test informatio
 
 * uia.utils-0.1.2.jar
 
-#### AAR - onbon bx06 api on Android devcie Libraries
+#### AAR - onbon bx06 api on Android devcie Libraries (Android only)
 * java.awt4a-0.1-release.aar
 
 ## project configuration
