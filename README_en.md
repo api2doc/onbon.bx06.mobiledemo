@@ -13,20 +13,20 @@ The controller that template from github source tests is BX-6Q2. Test informatio
 
 ## dependency files
 
-#### JAR - onbon bx06 api Java Libraries (same as Desktop version)
-* bx06.message-0.5.0-SNAPSHOT.jar
+#### JAR - [onbon bx06 api](https://github.com/api2doc/onbon.bx06.api) Java Libraries (7/10)
+* bx06.message-x.x.x-SNAPSHOT.jar
 
-* bx06-0.5.0-SNAPSHOT.jar
+* bx06-x.x.x-SNAPSHOT.jar
 
 * log4j-1.2.14.jar
 
 * simple-xml-2.7.1.jar
 
-* uia.comm-0.2.1.jar
+* uia.comm-x.x.x.jar
 
-* uia.message-0.5.1.jar
+* uia.message-x.x.x.jar
 
-* uia.utils-0.1.2.jar
+* uia.utils-x.x.x.jar
 
 #### AAR - onbon bx06 api on Android devcie Libraries (Android only)
 * java.awt4a-0.1-release.aar
@@ -56,7 +56,7 @@ allprojects {
 
 * dexOptions - allow to load Java AWT for Android。
 
-* dependencies - define dependency files of onbon.bx06 API including JAR and AAR. All files saved in __libs__ folder.
+* dependencies - define dependency files of onbon.bx06 API including JAR and AAR. All files saved in __libs__ folder. Note: file names need to be changed to correct version.
 
 
 ``` gradle

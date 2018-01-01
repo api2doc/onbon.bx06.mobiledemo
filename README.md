@@ -13,20 +13,20 @@ github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，�
 
 ## 相依檔案
 
-#### JAR - onbon bx06 api Java 庫 (與 Desktop 版本相同)
-* bx06.message-0.5.0-SNAPSHOT.jar
+#### JAR - [onbon bx06 api](https://github.com/api2doc/onbon.bx06.api) Java 庫 (7/10)
+* bx06.message-x.x.x-SNAPSHOT.jar
 
-* bx06-0.5.0-SNAPSHOT.jar
+* bx06-x.x.x-SNAPSHOT.jar
 
 * log4j-1.2.14.jar
 
 * simple-xml-2.7.1.jar
 
-* uia.comm-0.2.1.jar
+* uia.comm-x.x.x.jar
 
-* uia.message-0.5.1.jar
+* uia.message-x.x.x.jar
 
-* uia.utils-0.1.2.jar
+* uia.utils-x.x.x.jar
 
 #### AAR - onbon bx06 api on Android devcie 庫 (Android 專用)
 * java.awt4a-0.1-release.aar
@@ -56,7 +56,7 @@ allprojects {
 
 * dexOptions - 允許掛載 Java AWT for Android。
 
-* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 __libs__ 資料夾下。
+* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 __libs__ 資料夾下。注意：設置時依實際 jar 檔名調整。
 
 
 ``` gradle
