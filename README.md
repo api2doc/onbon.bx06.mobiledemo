@@ -7,7 +7,7 @@ onbon bx06 api for Android
 
 本文件說明如何在 [Android Studio](https://developer.android.com/studio/index.html) 開發環境下，建立 [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) 的開發項目。
 
-github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，資料顯示位置固定在 (96, 0)，內容大小 為 (32, 32)。
+github source 測試對象為 BX-6Q2 全彩控制器，資料顯示位置固定在 (96, 0)，內容大小 為 (32, 32)。
 
 <img src="images/screenshot1.png" alt="Sample" width="400" />
 
@@ -56,7 +56,7 @@ allprojects {
 
 * dexOptions - 允許掛載 Java AWT for Android。
 
-* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 __libs__ 資料夾下。注意：設置時依實際 jar 檔名調整。
+* dependencies - 定義 onbon.bx06 API 相關的 JAR & AAR 等八個檔案。檔案儲存在 __libs__ 資料夾下。注意：檔名依使用版本調正。
 
 
 ``` gradle

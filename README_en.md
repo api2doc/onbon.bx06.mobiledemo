@@ -7,7 +7,7 @@ onbon bx06 api for Android
 
 This document describes how to create a project of [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) in [Android Studio](https://developer.android.com/studio/index.html) IDE.
 
-The controller that template from github source tests is BX-6Q2. Test information always be showed at fixed position (96,0) with fixed size (32,32).
+Test target of github source is BX-6Q2. Test information always be showed at fixed position (96,0) with fixed size (32,32).
 
 <img src="images/screenshot1.png" alt="Sample" width="400" />
 
@@ -142,8 +142,8 @@ public class MainApplication extends Application {
 
 ## Develop
 
-#### Screen (Controller) operation
-Because socket client can't be runned on UI thread, all operations execute to screen need to run in new thread.
+#### Screen operation
+Because socket client can't be run on UI thread, all operations execute to the screen need to be run in a new thread.
 ``` Java
 new Thread(new Runnable() {
     public void run() {
@@ -153,7 +153,7 @@ new Thread(new Runnable() {
 ```
 
 #### UI Update
-After executing to screen on non UI thread, use __runOnUiThread__ to callback to UI thread.
+After executing to the screen on non UI thread, use __runOnUiThread__ to callback to UI thread.
 ``` Java
 runOnUiThread(new Runnable() {
     public void run() {
