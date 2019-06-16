@@ -13,7 +13,7 @@ github source 提供的項目樣板，測試對象為 BX-6Q2 全彩控制器，�
 
 ## 相依檔案
 
-#### JAR - onbon bx06 api Java 庫 (與 Desktop 版本相同)
+#### JAR - [onbon bx06 api](https://github.com/api2doc/onbon.bx06.api) Java 庫 (7/10)
 * bx06.message-0.5.0-SNAPSHOT.jar
 
 * bx06-0.5.0-SNAPSHOT.jar

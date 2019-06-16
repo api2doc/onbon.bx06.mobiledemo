@@ -13,7 +13,7 @@ The controller that template from github source tests is BX-6Q2. Test informatio
 
 ## dependency files
 
-#### JAR - onbon bx06 api Java Libraries (same as Desktop version)
+#### JAR - [onbon bx06 api](https://github.com/api2doc/onbon.bx06.api) Java Libraries (7/10)
 * bx06.message-0.5.0-SNAPSHOT.jar
 
 * bx06-0.5.0-SNAPSHOT.jar
