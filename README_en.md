@@ -7,26 +7,26 @@ onbon bx06 api for Android
 
 This document describes how to create a project of [onbon.bx06 api](https://github.com/api2doc/onbon.bx06.api) in [Android Studio](https://developer.android.com/studio/index.html) IDE.
 
-The controller that template from github source tests is BX-6Q2. Test information always be showed at fixed position (96,0) with fixed size (32,32).
+Test target of github source is BX-6Q2. Test information always be showed at fixed position (96,0) with fixed size (32,32).
 
 <img src="images/screenshot1.png" alt="Sample" width="400" />
 
 ## dependency files
 
 #### JAR - [onbon bx06 api](https://github.com/api2doc/onbon.bx06.api) Java Libraries (7/10)
-* bx06.message-0.5.0-SNAPSHOT.jar
+* bx06.message-x.x.x-SNAPSHOT.jar
 
-* bx06-0.5.0-SNAPSHOT.jar
+* bx06-x.x.x-SNAPSHOT.jar
 
 * log4j-1.2.14.jar
 
 * simple-xml-2.7.1.jar
 
-* uia.comm-0.2.1.jar
+* uia.comm-x.x.x.jar
 
-* uia.message-0.5.1.jar
+* uia.message-x.x.x.jar
 
-* uia.utils-0.1.2.jar
+* uia.utils-x.x.x.jar
 
 #### AAR - onbon bx06 api on Android devcie Libraries (Android only)
 * java.awt4a-0.1-release.aar
@@ -56,7 +56,7 @@ allprojects {
 
 * dexOptions - allow to load Java AWT for Android。
 
-* dependencies - define dependency files of onbon.bx06 API including JAR and AAR. All files saved in __libs__ folder.
+* dependencies - define dependency files of onbon.bx06 API including JAR and AAR. All files saved in __libs__ folder. Note: file names need to be changed to correct version.
 
 
 ``` gradle
@@ -142,8 +142,8 @@ public class MainApplication extends Application {
 
 ## Develop
 
-#### Screen (Controller) operation
-Because socket client can't be runned on UI thread, all operations execute to screen need to run in new thread.
+#### Screen operation
+Because socket client can't be run on UI thread, all operations execute to the screen need to be run in a new thread.
 ``` Java
 new Thread(new Runnable() {
     public void run() {
@@ -153,7 +153,7 @@ new Thread(new Runnable() {
 ```
 
 #### UI Update
-After executing to screen on non UI thread, use __runOnUiThread__ to callback to UI thread.
+After executing to the screen on non UI thread, use __runOnUiThread__ to callback to UI thread.
 ``` Java
 runOnUiThread(new Runnable() {
     public void run() {
